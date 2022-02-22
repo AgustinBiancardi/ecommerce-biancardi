@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.Enlinea {
+  display: inline;
+  margin-right: 100px;
+}
+
+.Enlinea a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu {
+  background-color: black;
+}
+
+ul{
+  text-align: right;
+}
