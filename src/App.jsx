@@ -9,7 +9,7 @@ function App() {
     <div>
 
       <Navbar/>
-      <ItemListCointainer/> 
+      <ItemListCointainer greting = {"Catálogo de Productos"}/> 
       {/* <Clase4 /> */}
     </div>
     

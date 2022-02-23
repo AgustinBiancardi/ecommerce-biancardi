@@ -1,10 +1,7 @@
-import Contenedor from "./Contenedor"
-
-
-function ItemListCointainer() {
+function ItemListCointainer({greting}) {
     return (
         <div>
-            <Contenedor greting = {"Catálogo de Productos"}/>
+            <h1>{greting}</h1>
         </div>
         
     )
