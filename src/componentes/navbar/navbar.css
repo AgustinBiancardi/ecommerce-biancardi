@@ -1,16 +1,19 @@
 .Enlinea {
     display: inline;
     margin-right: 100px;
-  }
+}
   
-  .Enlinea a {
+.Enlinea a {
     text-decoration: none;
     color: white;
-  }
+}
   
-  .menu {
-    background-color: black;
-  }
+.menu {
+  background-color: black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
   
 ul{
     text-align: right;

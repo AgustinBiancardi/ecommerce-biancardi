@@ -1,7 +1,9 @@
 // import CartWidget from './componentes/CartWidget';
-// import Clase4 from './componentes/Clase-4';
-import Navbar from './componentes/Navbar';
-import ItemListCointainer from './componentes/ItemListContainer';
+import Navbar from './componentes/navbar/Navbar';
+import ItemListCointainer from './componentes/itemListContainer/ItemListContainer';
+import Clase5 from './componentes/Clase5';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function App() {  
@@ -10,7 +12,7 @@ function App() {
 
       <Navbar/>
       <ItemListCointainer greting = {"Catálogo de Productos"}/> 
-      {/* <Clase4 /> */}
+      {/* <Clase5/> */}
     </div>
     
   );

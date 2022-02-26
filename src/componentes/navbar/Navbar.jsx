@@ -1,6 +1,6 @@
-import '../styles/navbar.css';
-import CartWidget from './CartWidget';
-import logo from "../images/logoo.png"
+import './navbar.css';
+import CartWidget from '../cartWidget/CartWidget';
+import logo from "../../images/logoo.png"
 
 function Navbar() {
   
