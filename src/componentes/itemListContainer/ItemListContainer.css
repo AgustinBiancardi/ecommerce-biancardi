@@ -1,0 +1,10 @@
+.Productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+h1{
+    margin-bottom: 50px;
+    text-align: center;
+}

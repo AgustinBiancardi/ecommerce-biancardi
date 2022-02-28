@@ -1,47 +1,45 @@
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
 import './itemCount.css';
+import Button from 'react-bootstrap/Button'
 
+function Clase4({ initial, stock }) {
 
-function Clase4({initial,stock}) {
+    const [Count, SetCount] = useState(initial)
+    const [Stock, SetStock] = useState(stock)
+    const [Mensaje, SetMensaje] = useState("")
+    const [Boolean, SetBoolean] = useState(false)
 
-    const [Count,SetCount] = useState(initial)
-    const [Stock,SetStock] = useState(stock)
-    const [Mensaje,SetMensaje] = useState ("")
-    const [Boolean,SetBoolean] = useState(false)
-
-    function restarProducto(){
-        if(Count>1){
+    function restarProducto() {
+        if (Count > 1) {
             SetCount(Count - 1)
-        }   
+        }
     }
 
-    function sumarProducto(){
-        if(Count<Stock){
-            SetCount(Count + 1)  
+    function sumarProducto() {
+        if (Count < Stock) {
+            SetCount(Count + 1)
         }
-    }   
+    }
 
-    function vaciarStock(){
+    function vaciarStock() {
         SetStock(Stock - Count)
     }
 
-    useEffect(()=>{
-        if(Count === 0){
+    useEffect(() => {
+        if (Count === 0) {
             SetMensaje("No hay mas productos de este tipo")
             SetBoolean(true)
-        }else if(Count >= Stock){
+        } else if (Count >= Stock) {
             SetMensaje("Es el máximo de productos que hay en stock")
-        }else if(Count<= 1){
-            SetMensaje( "Estás en la cantidad mínima de un producto")
-        }else {
+        } else {
             SetMensaje("")
         }
     }, [Count])
-    
-    useEffect(()=>{
-        if(Stock === 0){
+
+    useEffect(() => {
+        if (Stock === 0) {
             SetCount(0)
-        }else{
+        } else {
             SetCount(1)
         }
     }, [Stock])
@@ -50,13 +48,13 @@ function Clase4({initial,stock}) {
 
         <div className="itemCount">
             <div className="Elementos">
-                <button disabled = {Boolean} onClick={ restarProducto }> - </button>
-                <label>{ Count }</label>
-                <button disabled = {Boolean} onClick={ sumarProducto }> + </button>
+                <Button variant="success" disabled={Boolean} onClick={restarProducto} >-</Button>
+                <label>{Count}</label>
+                <Button variant="success" disabled={Boolean} onClick={sumarProducto} >+</Button>
             </div>
-            <button className = "boton" disabled = {Boolean} onClick={vaciarStock} >Agregar al carrito</button>
+            <Button variant="success boton" disabled={Boolean} onClick={vaciarStock} >Agregar al carrito</Button>
             <br />
-            <p>{ Mensaje }</p>   
+            <p>{Mensaje}</p>
         </div>
     )
 }
