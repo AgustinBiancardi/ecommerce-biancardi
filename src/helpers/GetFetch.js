@@ -10,7 +10,7 @@ export const productos = [
     {id:2 , nombre: "Chivito en escabeche" , foto: {chivitoEscabeche}}, 
     {id:3 , nombre: "Mostaza combinada" , foto: {mostazaCombinada}}, 
     {id:4 , nombre: "Porotos con escabeche" , foto: {porotosConEscabeche}}, 
-    {id:5 , nombre: "Mostaza con miel" , foto: {mostazaConMiel}}, 
+    {id:5 , nombre: "Mostaza con miel" , foto: "https://i.imgur.com/Z75ygzP.jpg"}, 
     {id:6 , nombre: "Chutney de durazno y romero" , foto: {chutney}} 
 ]
 

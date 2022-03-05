@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import './itemCount.css';
 import Button from 'react-bootstrap/Button'
 
-function Clase4({ initial, stock }) {
+function Clase4({ initial, stock , onAdd }) {
 
     const [Count, SetCount] = useState(initial)
     const [Stock, SetStock] = useState(stock)
@@ -23,6 +23,7 @@ function Clase4({ initial, stock }) {
 
     function vaciarStock() {
         SetStock(Stock - Count)
+        onAdd(Count)
     }
 
     useEffect(() => {

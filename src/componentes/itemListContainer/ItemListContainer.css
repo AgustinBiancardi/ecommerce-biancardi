@@ -8,3 +8,11 @@ h1{
     margin-bottom: 50px;
     text-align: center;
 }
+
+.ProductoIndividual{
+    margin-top: 50px;
+}
+
+.ProductoImagen{
+    height: 250px;
+}
