@@ -1,0 +1,13 @@
+.Card{
+    display: flex;
+    flex-direction: row;
+}
+
+.Img{
+    width: 500px;
+}
+
+.Body{
+display: flex;
+flex-direction: column;
+}
