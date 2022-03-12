@@ -1,9 +1,16 @@
 import "./ItemDetail.css"
+import ItemCount from '../itemCount/ItemCount';
+
 // import Card from 'react-bootstrap/Card'
 
 function ItemDetail({Producto}){
 
-    console.log(Producto)
+    function onAdd(cantidad) {
+        console.log(cantidad)
+    }
+
+    console.log(Producto.stock)
+
     return (
         <div className="Card">
         <img className = "Img"src={ Producto.foto } alt= {Producto.nombre} />
@@ -12,6 +19,7 @@ function ItemDetail({Producto}){
             <p>Precio: $ { Producto.precio }</p>
             <p>Stock: { Producto.stock }</p>
             <p>{ Producto.descripcion }</p>
+            <ItemCount initial={1} stock={ Producto.stock } onAdd={onAdd} />
         </div>
         </div>
     )

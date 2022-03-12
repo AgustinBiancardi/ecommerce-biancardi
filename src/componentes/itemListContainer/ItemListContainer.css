@@ -16,3 +16,7 @@ h1{
 .ProductoImagen{
     height: 250px;
 }
+
+.spinner{
+    margin-top: 100px;
+}
