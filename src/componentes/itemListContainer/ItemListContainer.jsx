@@ -9,20 +9,16 @@ import { useParams } from 'react-router-dom';
 function ItemListCointainer({ greting }) {
     const [Productos, SetProductos] = useState([])
     const { categoriaId } = useParams()
-    console.log(categoriaId)
-
 
     useEffect(() => {
         if (categoriaId) {
             getFetch
             .then((respuesta) => SetProductos(respuesta.filter(prod =>prod.category === categoriaId)))
             .catch(err => console.log(err))
-            .finally(() => console.log("loading"))
         }else{
             getFetch
             .then((respuesta) => SetProductos(respuesta))
-            .catch(err => console.log(err))
-            .finally(() => console.log("loading"))
+            .catch(err => console.log(err))  
         }
        
     }, [categoriaId])

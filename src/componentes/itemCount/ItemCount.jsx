@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import './itemCount.css';
 import Button from 'react-bootstrap/Button'
 
-function Clase4({ initial, stock , onAdd }) {
+function ItemCount({ initial, stock , onAdd }) {
 
     const [Count, SetCount] = useState(initial)
     const [Stock, SetStock] = useState(stock)
     const [Mensaje, SetMensaje] = useState("")
     const [Boolean, SetBoolean] = useState(false)
+
+    console.log(stock)
 
     function restarProducto() {
         if (Count > 1) {
@@ -60,4 +62,4 @@ function Clase4({ initial, stock , onAdd }) {
     )
 }
 
-export default Clase4
+export default ItemCount

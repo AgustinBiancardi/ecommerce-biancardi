@@ -17,5 +17,4 @@ export const getFetch = new Promise((resolve,reject)=>{
     }else{
         reject("404")
     }
-    
 })

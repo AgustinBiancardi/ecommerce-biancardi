@@ -14,8 +14,8 @@ function App() {
           <Route path="/" element = {<ItemListCointainer greting={"Catálogo de Productos"} />}/>
           <Route path="/category/:categoriaId" element = {<ItemListCointainer greting={"Catálogo de Productos"} />}/>
           <Route path="/p/:id" element = {<ItemDetailContainer />}/>
+          <Route path="/carrito" element = { <Cart/> } />
           <Route path="/*" element = {<Navigate to ="/" replace />}/>
-          <Route path="/carrito" element = { <Cart/> } /> 
         </Routes>
       </div>
     </BrowserRouter>

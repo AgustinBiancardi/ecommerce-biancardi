@@ -1,15 +1,13 @@
 import "./ItemDetail.css"
 import ItemCount from '../itemCount/ItemCount';
 
-// import Card from 'react-bootstrap/Card'
-
 function ItemDetail({Producto}){
 
     function onAdd(cantidad) {
         console.log(cantidad)
     }
 
-    console.log(Producto.stock)
+    console.log(Producto)
 
     return (
         <div className="Card">
