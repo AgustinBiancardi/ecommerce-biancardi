@@ -9,8 +9,6 @@ function ItemCount({ initial, stock , onAdd }) {
     const [Mensaje, SetMensaje] = useState("")
     const [Boolean, SetBoolean] = useState(false)
 
-    console.log(stock)
-
     function restarProducto() {
         if (Count > 1) {
             SetCount(Count - 1)
