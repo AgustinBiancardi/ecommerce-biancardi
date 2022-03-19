@@ -1,21 +1,36 @@
 import { createContext, useState } from "react";
 
-export const cartContext = createContext([]);
+export const CartContext = createContext([]);
 
-function CartContextProvider(){
-    const  [CartList, SetCartList] = useState([])
+function CartContextProvider({ children }) {
+    const [CartList, SetCartList] = useState([])
 
-    function agregarCart(item){
-        SetCartList(...CartList, item)
+    function agregarCart(item, cantidad) {
+
+        let repetido
+        if (repetido = CartList.find(elemento => elemento.id === item.id)) {
+            console.log("hay un item asi")
+            repetido.cantidad += cantidad
+        } else {
+            console.log("se agrega el producto porque no hay ninguno")
+            item.cantidad = cantidad
+            SetCartList([...CartList, item])
+        }
+
     }
 
-    return(
-        <cartContext.Provider value={{
+    function vaciarCart() {
+        SetCartList([])
+    }
+
+    return (
+        <CartContext.Provider value={{
             CartList,
-            agregarCart
+            agregarCart,
+            vaciarCart
         }}>
-            {/* {children} */}
-        </cartContext.Provider>
+            {children}
+        </CartContext.Provider>
     )
 }
 

@@ -4,13 +4,12 @@ import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailCon
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import Cart from './componentes/Cart/Cart';
-import { useState } from "react";
-import { cartContext } from "./context/cartContext"
+import CartContextProvider from "./context/cartContext"
 
 
 function App() {
   return (
-    // <cartContextProvider value={{}}>
+    <CartContextProvider>
       <BrowserRouter>
         <div>
           <Navbar />
@@ -24,7 +23,7 @@ function App() {
         </div>
 
       </BrowserRouter>
-    // </cartContextProvider>
+    </CartContextProvider>
 
   );
 
