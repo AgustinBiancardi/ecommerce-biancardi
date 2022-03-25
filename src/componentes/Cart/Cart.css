@@ -1,0 +1,28 @@
+.botonnn{
+    text-align: center;
+    align-items: center;
+    margin-left: 700px;
+    margin-top: 100px;
+}
+
+.carrito{
+    display: flex;
+    flex-direction: row;
+}
+
+.tabla{
+    width: 70%;
+}
+
+.total{
+    width: 30%;
+    text-align: center;
+}
+
+.fotoCarrito{
+    width: 100px;
+}
+
+.botonEliminar{
+    width: 30px;
+}

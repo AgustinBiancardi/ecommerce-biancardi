@@ -18,13 +18,16 @@ function ItemDetail({ Producto }) {
         agregarCart(Producto , cantidad)
     }
 
-    console.log(CartList)
-
     const GotoCarrito = () => {
         return (
+            <div className="contenedor">
+            <Link to="/" className="botonSeguir">
+                <Button variant="success">Segui comprando</Button>
+            </Link>
             <Link to="/carrito">
                 <Button variant="success">Ir al carrito</Button>
             </Link>
+            </div>
         )
     };
 

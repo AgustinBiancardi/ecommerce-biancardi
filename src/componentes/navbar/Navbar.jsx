@@ -14,7 +14,7 @@ function NavBar() {
         <div>
 
             <Navbar bg="light" expand="lg">
-                <Container fluid> 
+                <Container fluid>
                     <NavLink to="/">
                         <img
                             src={logo}

@@ -11,3 +11,12 @@
 display: flex;
 flex-direction: column;
 }
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+}
+
+.botonSeguir{
+    margin-right: 50px;
+}

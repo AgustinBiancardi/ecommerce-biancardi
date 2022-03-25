@@ -1,18 +1,20 @@
 import { createContext, useState } from "react";
+import { useEffect } from 'react';
+
 
 export const CartContext = createContext([]);
 
 function CartContextProvider({ children }) {
     const [CartList, SetCartList] = useState([])
+    const [Total, SetTotal] = useState()
 
     function agregarCart(item, cantidad) {
 
         let repetido
         if (repetido = CartList.find(elemento => elemento.id === item.id)) {
-            console.log("hay un item asi")
             repetido.cantidad += cantidad
+            SetCartList([...CartList])
         } else {
-            console.log("se agrega el producto porque no hay ninguno")
             item.cantidad = cantidad
             SetCartList([...CartList, item])
         }
@@ -23,11 +25,31 @@ function CartContextProvider({ children }) {
         SetCartList([])
     }
 
+    function eliminarProducto(id){
+        let newCartList = CartList.filter((item) => item.id !== id);
+        SetCartList(newCartList)
+    }
+
+    useEffect(()=>{
+        let total = 0
+        CartList.forEach(item => {
+            total += (item.cantidad * item.precio)
+        });
+        console.log(total)
+        SetTotal(total)
+    }, [CartList])
+    function calcularTotal(CartList){
+        
+    }
+
+
     return (
         <CartContext.Provider value={{
             CartList,
+            Total,
             agregarCart,
-            vaciarCart
+            vaciarCart,
+            eliminarProducto
         }}>
             {children}
         </CartContext.Provider>

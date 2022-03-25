@@ -17,7 +17,6 @@ function ItemDetailContainer() {
         getFetch
             .then((respuesta) => SetProductoSeleccionado(respuesta.find(element => element.id === id)))
             .catch(err => console.log(err))
-            .finally(console.log("loading"))
     }, [id])
 
     return (
