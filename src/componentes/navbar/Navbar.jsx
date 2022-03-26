@@ -32,16 +32,22 @@ function NavBar() {
                             navbarScroll
                         >
                             <Nav.Link>
-                                <NavLink to="category/pastas">Pastas de aceitunas</NavLink>
+                                <NavLink className="link" to="category/pastas">Pastas de aceitunas</NavLink>
                             </Nav.Link>
                             <Nav.Link>
-                                <NavLink to="category/escabeches">Escabeches</NavLink>
+                                <NavLink className="link" to="category/escabeches">Escabeches</NavLink>
+                            </Nav.Link>
+                            <Nav.Link>
+                                <NavLink className="link" to="category/mostazas">Mostazas</NavLink>
+                            </Nav.Link>
+                            <Nav.Link>
+                                <NavLink className="link" to="category/chutneys">Chutneys</NavLink>
                             </Nav.Link>
 
                             <Nav.Link href="/">Blog</Nav.Link>
                             <Nav.Link href="/">Nosotros</Nav.Link>
                         </Nav>
-                        <Form className="d-flex">
+                        {/* <Form className="d-flex">
                             <FormControl
                                 type="search"
                                 placeholder="Buscar producto"
@@ -49,7 +55,7 @@ function NavBar() {
                                 aria-label="Search"
                             />
                             <Button variant="outline-success">Buscar</Button>
-                        </Form>
+                        </Form> */}
                         <NavLink to="carrito">
                             <CartWidget />
                         </NavLink>

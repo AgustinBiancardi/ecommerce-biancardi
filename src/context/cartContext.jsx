@@ -35,7 +35,6 @@ function CartContextProvider({ children }) {
         CartList.forEach(item => {
             total += (item.cantidad * item.precio)
         });
-        console.log(total)
         SetTotal(total)
     }, [CartList])
     function calcularTotal(CartList){

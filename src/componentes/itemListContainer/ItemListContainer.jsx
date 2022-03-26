@@ -1,26 +1,29 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import "./ItemListContainer.css"
-import { getFetch } from '../../helpers/GetFetch';
 import ItemList from '../ItemList/ItemList';
 import Spinner from 'react-bootstrap/Spinner'
 import { useParams } from 'react-router-dom';
+import { getFirestore, doc, getDoc, collection, getDocs, where, query } from "firebase/firestore"
 
 function ItemListCointainer({ greting }) {
     const [Productos, SetProductos] = useState([])
     const { categoriaId } = useParams()
 
     useEffect(() => {
+        const db = getFirestore()
+        const queryCollection = collection(db, "items")
+
         if (categoriaId) {
-            getFetch
-            .then((respuesta) => SetProductos(respuesta.filter(prod =>prod.category === categoriaId)))
-            .catch(err => console.log(err))
-        }else{
-            getFetch
-            .then((respuesta) => SetProductos(respuesta))
-            .catch(err => console.log(err))  
+            const queryFilter = query(queryCollection, where("category", "==", categoriaId))
+            getDocs(queryFilter)
+                .then(resp => SetProductos(resp.docs.map(item => ({ id: item.id, ...item.data() }))))
+                .catch(err => console.log(err))
+        } else {
+            getDocs(queryCollection)
+                .then(resp => SetProductos(resp.docs.map(item => ({ id: item.id, ...item.data() }))))
+                .catch(err => console.log(err))
         }
-       
     }, [categoriaId])
 
     return (
@@ -34,15 +37,3 @@ function ItemListCointainer({ greting }) {
 }
 
 export default ItemListCointainer
-
-    // useEffect(()=>{
-    //     console.log("LLamada a la API siempre")
-    // })
-
-    // useEffect(()=>{
-    //     console.log("LLamada a la API sólo una vez luego del montaje")
-    // }, [])
-
-    // useEffect(()=>{
-    //     console.log("LLamada a la API sólo si cambia un state,prop,etc")
-    // }, [Count])
