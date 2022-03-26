@@ -3,9 +3,6 @@ import { CartContext } from "../../context/cartContext"
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import "./Cart.css"
-import eliminar from "../../images/eliminar.png";
-
-
 
 function Cart() {
 
@@ -32,7 +29,7 @@ function Cart() {
                                             <td>{item.nombre}</td>
                                             <td>{item.precio}</td>
                                             <td>{item.cantidad}</td>
-                                            <td><Button variant="light" ><img src={eliminar} className="botonEliminar" onClick={() => eliminarProducto(item.id)} /></Button></td>
+                                            <td><Button variant="light" ><img src="https://i.imgur.com/5BUojiS.png" className="botonEliminar" onClick={() => eliminarProducto(item.id)} /></Button></td>
                                             
                                         </tr>
                                         )}
