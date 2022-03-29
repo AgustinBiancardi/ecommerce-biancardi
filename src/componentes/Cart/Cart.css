@@ -11,11 +11,11 @@
 }
 
 .tabla{
-    width: 70%;
+    width: 60%;
 }
 
 .total{
-    width: 30%;
+    width: 40%;
     text-align: center;
 }
 
@@ -25,4 +25,10 @@
 
 .botonEliminar{
     width: 30px;
+}
+
+.campo{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
 }

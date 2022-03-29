@@ -43,9 +43,6 @@ function NavBar() {
                             <Nav.Link>
                                 <NavLink className="link" to="category/chutneys">Chutneys</NavLink>
                             </Nav.Link>
-
-                            <Nav.Link href="/">Blog</Nav.Link>
-                            <Nav.Link href="/">Nosotros</Nav.Link>
                         </Nav>
                         {/* <Form className="d-flex">
                             <FormControl

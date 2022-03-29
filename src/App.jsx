@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import Cart from './componentes/Cart/Cart';
 import CartContextProvider from "./context/cartContext"
 
-
 function App() {
   return (
     <CartContextProvider>
@@ -26,7 +25,6 @@ function App() {
     </CartContextProvider>
 
   );
-
 }
 
 export default App;
