@@ -3,9 +3,6 @@ import logo from "../../images/logo.png";
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
-import Form from 'react-bootstrap/Form'
-import FormControl from 'react-bootstrap/FormControl'
-import Button from 'react-bootstrap/Button'
 import { NavLink } from "react-router-dom"
 import "./Navbar.css"
 
@@ -44,15 +41,6 @@ function NavBar() {
                                 <NavLink className="link" to="category/chutneys">Chutneys</NavLink>
                             </Nav.Link>
                         </Nav>
-                        {/* <Form className="d-flex">
-                            <FormControl
-                                type="search"
-                                placeholder="Buscar producto"
-                                className="me-2"
-                                aria-label="Search"
-                            />
-                            <Button variant="outline-success">Buscar</Button>
-                        </Form> */}
                         <NavLink to="carrito">
                             <CartWidget />
                         </NavLink>
