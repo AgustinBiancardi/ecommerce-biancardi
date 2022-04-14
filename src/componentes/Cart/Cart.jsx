@@ -129,7 +129,7 @@ function Cart() {
                             <Modal.Body>¡Muchas gracias por comprar en D'Gustar! Tu numero de orden es: {IdOrden}</Modal.Body>
                             <Modal.Footer>
                                 <Button variant="success" onClick={handleClose}>
-                                    Cerar
+                                    Cerrar
                                 </Button>
                             </Modal.Footer>
                         </Modal>
